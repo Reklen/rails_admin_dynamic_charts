@@ -1,0 +1,42 @@
+Leyenda
+=======
+* [high] top priority => lo que hay que hacer primero
+* [medium] 
+* [low] puede ser que nunca se haga
+
+Pending (esto es lo que hay que hacer)
+======================================
+
+* poner un botoncito [save] en la vista de los filtros para que no haya que intuir dar enter
+
+* que los filtros salgan en la tabla de abajo
+
+* filtros condicionales anidados (no se si este es el nombre correcto)
+  . que la edad sea mayor que 30
+  . que el nombre empiece con p
+  . que la edad sea tal OR la edad sea multiplo de 5 AND otra cosa
+  . NOTA: fijarse en el diagramita que te hice
+  . NOTA: tratar los filtros "normales" y los filtros "condicionales" por igual (todos son filtros)
+
+* guardar los filtros 
+  . que aparezca una entrada a la izquierda para acceder directamente a filtros guardados
+
+* [bug] verificar que cuando se haga un filtro/grafico se mantengan los valores en los combos
+
+Terminado (esto es lo que ya esta terminado)
+============================================
+
+* [high] poner mas tipos de datos en el "eje x"
+  . ya aparecieron los strings
+  . poner los que falta (int, float, bool, etc)
+
+* [high] ver la manera de especificar que campos quieres que aparezcan en los filtros y cuales no
+  . variante 1: con clicks en la interfaz de admin
+  . variante 2: con codigo dentro del modelo (por ejemplo: filtrable_attributes :a, :b, :c...)
+  . DUDA: profe no se hacer no se qu
+
+* organizar la vista de rails admin
+  - en una parte la configuracion del grafico:
+    . cuales son los campos a filtrar (arriba)
+    . cuales son los elementos de cada eje y las funciones agregadas, etc. (abajo)
+  - en otra parte lo que tenga que ver con los filtros
