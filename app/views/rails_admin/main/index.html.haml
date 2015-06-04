@@ -1,7 +1,19 @@
 :ruby
   require 'rails_admin/config/fields/types/datetime.rb'
   query = params[:query]
+
+
+  #params.delete(:filter_name_to_save) if params[:filter_name_to_save].blank?
+
   params = request.params.except(:authenticity_token, :action, :controller, :utf8, :bulk_export, :_pjax)
+
+  params.delete(:advanced_filter) #see
+  params.delete(:not_filter_name1)
+  params.delete(:not_filter_name2)
+  params.delete(:filter_name_to_save)
+  filter_name_to_save = params[:filter_name_to_save]
+  params.delete(:filter)
+
   params.delete(:query) if params[:query].blank?
   params.delete(:sort_reverse) unless params[:sort_reverse] == 'true'
   sort_reverse = params[:sort_reverse]
@@ -98,15 +110,37 @@
       = "#list td.#{property.css_class} { max-width: #{property.column_width}px; }"
   = form_tag(index_path(params.except(*%w[page f query])), method: :get, class: "pjax-form form-inline") do
     .well
+      %input.input{name:"filter_name_to_save", value: filter_name_to_save, placeholder: t("admin.filter.filter_save")}
+      %button.btn.btn-primary{type: "submit", :'data-disable-with' => "<i class='icon-white icon-check'></i> ".html_safe + t("admin.misc.refresh")}
+        %i.icon-white.icon-check
+        = t("Save Filter")
+      %div
+      %br
+        = check_box_tag 'advanced_filter'
+        Advanced Filter
+      %div
+      %br
+      = content_for :chart_advanced_filters
+      %button.btn.btn-primary{type: "submit", :'data-disable-with' => "<i class='icon-white icon-play'></i> ".html_safe + t("admin.misc.refresh")}
+        %i.icon-white.icon-play
+        = t("Apply Filter")
+      %div
+        %br
+
       %span#filters_box
       %hr.filters_box{style: "display:#{@ordered_filters.empty? ? 'none' : 'block'}"}
+      %label= t('Fast Filter')
       %input.input-small{name: "query", type: "search", value: query, placeholder: t("admin.misc.filter")}
-      = content_for :chart_controls
+    .well
+      = content_for :chart_filters
       %button.btn.btn-primary{type: "submit", :'data-disable-with' => "<i class='icon-white icon-refresh'></i> ".html_safe + t("admin.misc.refresh")}
         %i.icon-white.icon-refresh
         = t("admin.misc.refresh")
       - if export_action
         %span{style: 'float:right'}= link_to wording_for(:link, export_action), export_path(params.except('set').except('page')), class: 'btn btn-info'
+        %div
+        %br
+      = content_for :chart_controls
 
   = content_for :chart_chart
 
@@ -138,6 +172,8 @@
             %th.other.right.shrink= "..."
           %th.last.shrink
       %tbody
+        -# if !@my_query.nil?
+          - @objects = @my_query
         - @objects.each do |object|
           %tr{class: "#{@abstract_model.param_key}_row"}
             %td
