@@ -1,3 +1,5 @@
+:ruby
+  require 'rails_admin/config/fields/types/datetime.rb'
 - @acumulate = params[:acumulate] || 'beginning_of_month'
 - @data_field = (params[:data_field] || :created_at).to_sym
 - @chart = params[:chart] || 'line_chart'
@@ -11,39 +13,131 @@
 - calculation_types['mode'] = :mode            if Array.method_defined? :mode
 - calculation_types['variance'] = :variance    if Array.method_defined? :variance
 
-- chart_types = {'line chart' => 'line_chart','column chart' => 'column_chart', 'area chart' => :area_chart, 'bar chart' => :bar_chart, 'pie chart' => :pie_chart}
+- chart_types = {'line chart' => 'line_chart','column chart' => 'column_chart', 'area chart' => :area_chart, 'bar chart' => :bar_chart, 'pie chart' => :pie_chart}#, 'geo chart' => :geo_chart}
 
 - data_fields = []
 - numeric_fields = []
+- string_fields = []
+- boolean_fields = []
+- time_fields = []
+- filter_names = []
+- oper_logic = []
+- @type_fields = {}
+
+- not_filter = @abstract_model.model.create().graphicable_data
+- klass = @abstract_model.model_name.constantize
+-#-----------------------------------------------------------------------------------------------------------------------
+- @@my_global_query ||= nil # garantizo la inicializacion de la variable global y a su vez q esta conserve su valor una vez que alla sido inicializada
+- model = @abstract_model.model
+- if params[:advanced_filter] == "1"
+  - if (@filter_names1 = params[:filter_names1]).present? && (@filter_names2 = params[:filter_names2]).present? && (@oper_logic = params[:oper_logic]).present?
+    - new_filter = klass.created_advanced_filter(@filter_names1, @filter_names2, @oper_logic, @not_filter1, @not_filter2)
+    - my_query = klass.advanced_query(new_filter, model)
+    - @my_query = model.where(my_query)
+    - @@my_global_query = @my_query
+
+- elsif params[:f].present?
+  - filters =  params[:f]
+  - filters = filters.to_hash
+  - puts filters
+  - my_query = klass.advanced_query(filters, model)
+  - @my_query = model.where(my_query)
+  - @@my_global_query = @my_query
+
+- elsif (filters = params[:filter]).present?
+  - filters = filters.to_hash
+  - my_query = klass.advanced_query(filters, model)
+  - @my_query = model.where(my_query)
+  - @@my_global_query = @my_query
+
+- elsif params[:query].present?
+  - @@my_global_query = nil
+
+- if !@my_query.nil?
+  - @objects = @my_query
+- elsif @@my_global_query.present?
+  - @objects = @@my_global_query
+
+
+-#-----------------------------------------------------------------------------------------------------------------------
+
 - if @filterable_fields.present?
   - @filterable_fields.each do |field|
-    - if ( field.type == :float || field.type == :integer || field.type == :decimal ) && field.name != :id
-      - @met = params[:met] || field.name
-      - numeric_fields << field.name
-    - elsif field.type == :date || field.type == :datetime
-      - data_fields << field
-- if @met
-  = javascript_include_tag 'rails_admin/d3'
+    - if !not_filter.include?(field.name)
+      - if ( field.type == :float || field.type == :integer || field.type == :decimal ) && field.name != :id
+        - @type_fields[field.name] = field.type
+        - @met = params[:met] || field.name
+        - @filters1 = params[:filter1] || field.name
+        - numeric_fields << field.name
+      - elsif field.type == :date || field.type == :datetime
+        - @type_fields[field.name] = field.type
+        - @filters3 = params[:filter3] || field.name
+        - time_fields << field.name
+      - elsif field.type == :string
+        - @type_fields[field.name] = field.type
+        - @filters2 = params[:filter2] || field.name
+        - string_fields << field.name
+      - elsif field.type == :boolean
+        - @type_fields[field.name] = field.type
+        - @filters4 = params[:filter4] || field.name
+        - boolean_fields << field.name
+
+  = javascript_include_tag 'rails_admin/d3'                 # duda-----------------------------------------------------------------
   - klass = @abstract_model.model_name.constantize
   - field = data_fields.first
 
+  = content_for :chart_advanced_filters do
+    - oper_logic[0] = "AND"
+    - oper_logic[1] = "OR"
+    - @oper_logic = params[:oper_logic] || oper_logic[0]
+    - filters_from_filters = Filter.all
+    - filters_from_filters.each do |filter|
+      - @filter_names1 = params[:filter_names1] || filter.name
+      - @filter_names2 = params[:filter_names2] || filter.name
+      - filter_names << filter.name
+    -#%label= t('Advanced Filter')
+    = check_box_tag 'not_filter_name1'
+    not
+    = select_tag :filter_names1, options_for_select( filter_names, @filter_names1 ), class: 'input-small'
+    = select_tag :oper_logic, options_for_select( oper_logic, @oper_logic ), class: 'input-small'
+    = check_box_tag 'not_filter_name2'
+    not
+    = select_tag :filter_names2, options_for_select( filter_names, @filter_names2 ), class: 'input-small'
+
+
   = content_for :chart_controls do
     %label= t('admin.charts.axisa_label')
-    %select.input-small{name: :data_field }
-      - data_fields.each do |f|
-        - if @data_field == f.name
-          %option{selected: 'selected', value: f.name }
-            = f.label
-        - else
-          %option{value: f.name }
-            = f.label
+    -#%select.input-small{name: :data_field }
+    - data_fields << @filters1 << @filters2 << @filters3 << @filters4
+    - #  - data_fields.each do |f|
+    - #    - if @data_field == f
+    -#      %option{selected: 'selected', value: f }
+    -#        = f
+    -#    - else
+    -#     %option{value: f }
+    -#        = f
+    = select_tag :data_field, options_for_select( data_fields, @data_field ), class: 'input-small'
     %label= t('admin.charts.axisa_field_label')
     = select_tag :met, options_for_select( numeric_fields, @met ), class: 'input-small'
     = select_tag :acumulate, options_for_select( acumulate_types, @acumulate ), class: 'input-small'
     = select_tag :calculation, options_for_select( calculation_types, @calculation ), class: 'input-small'
     = select_tag :chart, options_for_select( chart_types, @chart ), class: 'input-small'
 
+  = content_for :chart_filters do
+    %label= t('admin.charts.filters_type')
+    = select_tag :filter1, options_for_select( numeric_fields, @filters1 ), class: 'input-small'
+    = select_tag :filter2, options_for_select( string_fields, @filters2 ), class: 'input-small'
+    = select_tag :filter3, options_for_select( time_fields, @filters3 ), class: 'input-small'
+    = select_tag :filter4, options_for_select( boolean_fields, @filters4 ), class: 'input-small'
+
+
+
   = content_for :chart_chart do
     - all_objects = @objects.limit(klass.count).offset(0)
-    - data = klass.data_by(all_objects,@met,@data_field,@calculation, @acumulate )[0][:data]
+    -# if @data_field == :created_at || @data_field == :updated_at
+    - @type = @type_fields[@data_field]
+    - data = klass.data_by(all_objects,@met,@data_field,@calculation, @acumulate, @type )#[0][:data]
     = send(@chart, data, library: {chart:{zoomType:'x',style: {overflow: 'visible'}}} )
+    -# else
+      - data = klass.data_by(all_objects,@met,@data_field,@calculation, @acumulate)
+      = send(@chart, data, library: {chart:{zoomType:'x',style: {overflow: 'visible'}}} )
