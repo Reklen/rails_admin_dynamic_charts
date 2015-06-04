@@ -3,3 +3,6 @@ en:
     charts:
       axisa_label: "Time line"
       axisa_field_label: "Field"
+      filters_type: "Campos a Filtrar"
+    filter:
+      filter_save: "Filter Name to save"
