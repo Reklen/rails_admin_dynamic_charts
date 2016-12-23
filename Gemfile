@@ -1,5 +1,5 @@
-#source 'https://rubygems.org'
-source 'file:///home/ale/Documentos/Code/gems/rubygems/'
+source 'https://rubygems.org'
+#source 'file:///home/ale/Documentos/Code/gems/rubygems/'
 
 gem 'chartkick'
 
