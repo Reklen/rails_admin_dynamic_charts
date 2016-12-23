@@ -2,6 +2,7 @@
   require 'rails_admin/config/fields/types/datetime.rb'
   query = params[:query]
 
+  model = @abstract_model.model
 
   #params.delete(:filter_name_to_save) if params[:filter_name_to_save].blank?
 
@@ -110,20 +111,10 @@
       = "#list td.#{property.css_class} { max-width: #{property.column_width}px; }"
   = form_tag(index_path(params.except(*%w[page f query])), method: :get, class: "pjax-form form-inline") do
     .well
-      %input.input{name:"filter_name_to_save", value: filter_name_to_save, placeholder: t("admin.filter.filter_save")}
-      %button.btn.btn-primary{type: "submit", :'data-disable-with' => "<i class='icon-white icon-check'></i> ".html_safe + t("admin.misc.refresh")}
-        %i.icon-white.icon-check
-        = t("Save Filter")
-      %div
-      %br
-        = check_box_tag 'advanced_filter'
-        Advanced Filter
+      = content_for :safe_filter
       %div
       %br
       = content_for :chart_advanced_filters
-      %button.btn.btn-primary{type: "submit", :'data-disable-with' => "<i class='icon-white icon-play'></i> ".html_safe + t("admin.misc.refresh")}
-        %i.icon-white.icon-play
-        = t("Apply Filter")
       %div
         %br
 
@@ -174,6 +165,8 @@
       %tbody
         -# if !@my_query.nil?
           - @objects = @my_query
+        -if model != @objects.klass
+          -@objects = model.all
         - @objects.each do |object|
           %tr{class: "#{@abstract_model.param_key}_row"}
             %td

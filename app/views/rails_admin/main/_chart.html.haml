@@ -1,9 +1,12 @@
 :ruby
   require 'rails_admin/config/fields/types/datetime.rb'
 - @acumulate = params[:acumulate] || 'beginning_of_month'
-- @data_field = (params[:data_field] || :created_at).to_sym
+- @data_field = (params[:data_field] || :updated_at).to_sym
 - @chart = params[:chart] || 'line_chart'
 - @calculation = params[:calculation] || 'sum'
+
+
+- filter_name_to_save = params[:filter_name_to_save]
 
 - acumulate_types = {'daily' => 'beginning_of_day', 'weekly' => 'beginning_of_week', 'monthly' => 'beginning_of_month', 'quarterly' => 'beginning_of_quarter','yearly' => 'beginning_of_year', 'week days' => 'wday', 'hours' => 'hour' }
 - calculation_types = {'count' => :count, 'max' => :max, 'min' => :min,'sum' => 'sum'}
@@ -23,8 +26,14 @@
 - filter_names = []
 - oper_logic = []
 - @type_fields = {}
+- not_filter = []
 
-- not_filter = @abstract_model.model.create().graphicable_data
+- begin
+  - not_filter = @abstract_model.model.create().graphicable_data
+- rescue Exception => e
+  - @e = e.class
+  - not_filter = []
+-# not_filter = @abstract_model.model.create().graphicable_data
 - klass = @abstract_model.model_name.constantize
 -#-----------------------------------------------------------------------------------------------------------------------
 - @@my_global_query ||= nil # garantizo la inicializacion de la variable global y a su vez q esta conserve su valor una vez que alla sido inicializada
@@ -32,9 +41,13 @@
 - if params[:advanced_filter] == "1"
   - if (@filter_names1 = params[:filter_names1]).present? && (@filter_names2 = params[:filter_names2]).present? && (@oper_logic = params[:oper_logic]).present?
     - new_filter = klass.created_advanced_filter(@filter_names1, @filter_names2, @oper_logic, @not_filter1, @not_filter2)
-    - my_query = klass.advanced_query(new_filter, model)
-    - @my_query = model.where(my_query)
-    - @@my_global_query = @my_query
+    - if new_filter[0] == false
+      - flash[:error] = "#{new_filter[1]}"
+      - @@my_global_query = @abstract_model.model.all
+    - else
+      - my_query = klass.advanced_query(new_filter[1], model)
+      - @my_query = model.where(my_query)
+      - @@my_global_query = @my_query
 
 - elsif params[:f].present?
   - filters =  params[:f]
@@ -86,16 +99,27 @@
   - klass = @abstract_model.model_name.constantize
   - field = data_fields.first
 
+  = content_for :safe_filter do
+    %input.input{name:"filter_name_to_save", placeholder: t("admin.filter.filter_save")}
+    %button.btn.btn-primary{type: "submit", :'data-disable-with' => "<i class='icon-white icon-check'></i> ".html_safe + t("admin.misc.refresh")}
+      %i.icon-white.icon-check
+      = t("Save Filter")
+
   = content_for :chart_advanced_filters do
     - oper_logic[0] = "AND"
     - oper_logic[1] = "OR"
     - @oper_logic = params[:oper_logic] || oper_logic[0]
     - filters_from_filters = Filter.all
     - filters_from_filters.each do |filter|
-      - @filter_names1 = params[:filter_names1] || filter.name
-      - @filter_names2 = params[:filter_names2] || filter.name
-      - filter_names << filter.name
+      - if filter.class_name == "#{model}"
+        - @filter_names1 = params[:filter_names1] || filter.name
+        - @filter_names2 = params[:filter_names2] || filter.name
+        - filter_names << filter.name
     -#%label= t('Advanced Filter')
+    = check_box_tag 'advanced_filter'
+    Advanced Filter
+    %div
+    %br
     = check_box_tag 'not_filter_name1'
     not
     = select_tag :filter_names1, options_for_select( filter_names, @filter_names1 ), class: 'input-small'
@@ -103,7 +127,9 @@
     = check_box_tag 'not_filter_name2'
     not
     = select_tag :filter_names2, options_for_select( filter_names, @filter_names2 ), class: 'input-small'
-
+    %button.btn.btn-primary{type: "submit", :'data-disable-with' => "<i class='icon-white icon-play'></i> ".html_safe + t("admin.misc.refresh")}
+      %i.icon-white.icon-play
+      = t("Apply Filter")
 
   = content_for :chart_controls do
     %label= t('admin.charts.axisa_label')
@@ -133,11 +159,19 @@
 
 
   = content_for :chart_chart do
-    - all_objects = @objects.limit(klass.count).offset(0)
-    -# if @data_field == :created_at || @data_field == :updated_at
-    - @type = @type_fields[@data_field]
-    - data = klass.data_by(all_objects,@met,@data_field,@calculation, @acumulate, @type )#[0][:data]
-    = send(@chart, data, library: {chart:{zoomType:'x',style: {overflow: 'visible'}}} )
+    - if model == @objects.klass
+      - all_objects = @objects.limit(klass.count).offset(0)
+      -# if @data_field == :created_at || @data_field == :updated_at
+      - @type = @type_fields[@data_field]
+      - data = klass.data_by(all_objects,@met,@data_field,@calculation, @acumulate, @type )#[0][:data]
+      = send(@chart, data, library: {chart:{zoomType:'x',style: {overflow: 'visible'}}} )
+    - else
+      - @objects = model.all
+      - all_objects = @objects.limit(klass.count).offset(0)
+      -# if @data_field == :created_at || @data_field == :updated_at
+      - @type = @type_fields[@data_field]
+      - data = klass.data_by(all_objects,@met,@data_field,@calculation, @acumulate, @type )#[0][:data]
+      = send(@chart, data, library: {chart:{zoomType:'x',style: {overflow: 'visible'}}} )
     -# else
       - data = klass.data_by(all_objects,@met,@data_field,@calculation, @acumulate)
       = send(@chart, data, library: {chart:{zoomType:'x',style: {overflow: 'visible'}}} )

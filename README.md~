@@ -13,7 +13,7 @@ In your `Gemfile`, add the following dependency:
 Run:
 
     $ bundle install
-    $ rails g rails_admin_dynamic_charts:install
+    $ rails g rails_admin_analytics:install
     
 For any model where you wish to display a chart add the following just under the class declaration:
 
@@ -30,7 +30,7 @@ config.actions do
     ...
 ```
 
-In order to register the action 'launch_filter' in rails_admin
+Para registrar la acción 'launch_filter' en rails_admin
 
 add in your config/initializers/rails_admin.rb
 ```ruby

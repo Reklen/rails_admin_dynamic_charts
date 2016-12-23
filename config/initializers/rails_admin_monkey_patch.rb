@@ -28,7 +28,7 @@ module RailsAdmin
             #oper_logic = params[:oper_logic]
             #not_filter_names1 =
 
-            pass = false
+            #pass = false
 
             if (filter_name = params[:filter_name_to_save]).present? && (filters = params[:f]).present?
 
@@ -65,12 +65,16 @@ module RailsAdmin
                  # else
                     klass = @abstract_model.model_name.constantize
                     new_filter = klass.created_advanced_filter(@filter_names1, @filter_names2, @oper_logic, @not_filter1, @not_filter2)
-                    json_filters = new_filter.to_json
-                    filter_save = Filter.new(name: filter_name, filter: json_filters, class_name: @abstract_model.model_name)
-                    if filter_save.save
-                      flash[:success] = "Successful Save Filter"
+                    if new_filter[0] == false
+                      flash[:error] = "#{new_filter[1]}"
                     else
-                      flash[:error] = filter_save.errors.full_messages
+                      json_filters = new_filter[1].to_json
+                      filter_save = Filter.new(name: filter_name, filter: json_filters, class_name: @abstract_model.model_name)
+                      if filter_save.save
+                        flash[:success] = "Successful Save Filter"
+                      else
+                        flash[:error] = filter_save.errors.full_messages
+                      end
                     end
                   end
                 end

@@ -55,32 +55,49 @@ module RailsAdminDynamicCharts
         x = Filter.where(" #{"name"} LIKE '#{a}'")
         y = Filter.where(" #{"name"} LIKE '#{b}'")
 
+        #x = [nil]
+
         x1 = nil
         y1 = nil
 
-        x.each { |x| x1 = JSON.parse(x.filter) }
-        y.each { |y| y1 = JSON.parse(y.filter) }
-        #- #puts x.name
-        #- #puts x.filter
-
-        if not_a == true
-          new_filter["not_0"] = x1.to_hash
-        else
-          new_filter["0"] = x1.to_hash
+        x.each do |x|
+          begin
+            x1 = JSON.parse(x.filter)
+          rescue Exception => e
+            @e = e.class
+            x1 = nil
+          end
+        end
+        y.each do |y|
+          begin
+            y1 = JSON.parse(y.filter)
+          rescue Exception => e
+            @e = e.class
+            y1 = nil
+          end
         end
 
-        if not_b == true
-          new_filter["not_2"] = y1.to_hash
+        if x1.nil? || y1.nil?
+          return [false,@e]
         else
-          new_filter["2"] = y1.to_hash
+          if not_a == true
+            new_filter["not_0"] = x1.to_hash
+          else
+            new_filter["0"] = x1.to_hash
+          end
+
+          if not_b == true
+            new_filter["not_2"] = y1.to_hash
+          else
+            new_filter["2"] = y1.to_hash
+          end
+
+          #new_filter["0"] = x1.to_hash
+          #new_filter["2"] = y1.to_hash
+          new_filter["1"] = c
+
+          return [true,new_filter]
         end
-
-        #new_filter["0"] = x1.to_hash
-        #new_filter["2"] = y1.to_hash
-        new_filter["1"] = c
-
-        return new_filter
-
       end
 
       def advanced_query(query, model)

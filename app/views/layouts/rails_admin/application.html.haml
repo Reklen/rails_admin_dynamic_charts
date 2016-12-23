@@ -33,11 +33,6 @@
           .well.sidebar-nav
             %ul.nav.nav-list= main_navigation
             %ul.nav.nav-list= static_navigation
-          .well.sidebar-nav
-            %li.nav-header
-              = label= 'Estoy Aqui!!!'
-              -Filter.all.each do |filter|
-                -RailsAdmin::Config.navigation_static_links[filter.name] = "filter/#{filter.id}/launch_filter"
 
         .span9
           .row-fluid

@@ -1,0 +1,1111 @@
+  [1m[36m (107.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (121.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFilters (20150610140718)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "filters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "filter" varchar(255), "class_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150610140718"]]
+  [1m[36m (97.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mFilter Load (1.2ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[36mFilter Load (1.2ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[36mFilter Load (1.2ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[36mFilter Load (5.5ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.4ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.2ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.6ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36mSQL (10.3ms)[0m  [1mINSERT INTO "filters" ("class_name", "created_at", "filter", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["class_name", "user"], ["created_at", Thu, 11 Jun 2015 10:45:52 UTC +00:00], ["filter", "{\"married\"=>{\"29609\"=>{\"v\"=>\"_discard\"}, \"38658\"=>{\"v\"=>\"true\"}, \"38676\"=>{\"v\"=>\"false\"}}}"], ["name", "MyFilter"], ["updated_at", Thu, 11 Jun 2015 10:45:52 UTC +00:00]]
+  [1m[35m (104.7ms)[0m  commit transaction
+  [1m[36mFilter Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.5ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.6ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.4ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.6ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.5ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.6ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.4ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.4ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[36mFilter Load (1.2ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.6ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.7ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.5ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.4ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.7ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.4ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.4ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "filters" ("class_name", "created_at", "filter", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["class_name", "book"], ["created_at", Thu, 11 Jun 2015 11:53:35 UTC +00:00], ["filter", "{\"married\"=>{\"29609\"=>{\"v\"=>\"_discard\"}}}"], ["name", "MyFilter1"], ["updated_at", Thu, 11 Jun 2015 11:53:35 UTC +00:00]]
+  [1m[36m (94.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.4ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.4ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.5ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.4ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.6ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.4ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.5ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.8ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.4ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.4ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.4ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "filters"
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.5ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.5ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.6ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.4ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.7ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.7ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.5ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.5ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[36mFilter Load (1.3ms)[0m  [1mSELECT "filters".* FROM "filters"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.5ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" IS NULL LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" IS NULL LIMIT 1[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.2ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter1' LIMIT 1
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFilter Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1[0m
+  [1m[35mFilter Exists (0.1ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mFilter Exists (0.3ms)[0m  SELECT 1 AS one FROM "filters" WHERE "filters"."name" = 'MyFilter' LIMIT 1
+  [1m[36mFilter Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "filters" WHERE "filters"."filter" = '{"married"=>{"29609"=>{"v"=>"_discard"}, "38658"=>{"v"=>"true"}, "38676"=>{"v"=>"false"}}}' LIMIT 1[0m
