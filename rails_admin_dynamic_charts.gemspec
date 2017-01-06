@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '>= 3.2'
   s.add_dependency 'rails_admin', '> 0'
   s.add_dependency 'chartkick', '> 0'
+  s.add_dependency 'jquery-rails'
   s.add_dependency 'descriptive_statistics', '> 0'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rspec-rails'

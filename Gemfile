@@ -4,12 +4,8 @@ source 'https://rubygems.org'
 gem 'chartkick'
 
 gem 'railties'
-<<<<<<< HEAD
-=======
-
 gem 'core_ext'
->>>>>>> parent of 2ee87a5... adding codeclimate test reporter
+gem 'jquery-rails'
 
-gem 'core_ext'
 
 gemspec
